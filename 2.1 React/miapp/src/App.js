@@ -10,7 +10,8 @@ function App() {
   let localtime = new Date();
   let horaqatar = new Date(localtime.getTime() + (3600000 * 8));
   let horacorea = new Date(localtime.getTime() + (3600000 * 14));
-  
+  let horamexico = new Date(localtime.getTime() + (3600000 * (-1)));
+
   const titulo = React.createElement(
     'h1',
     {},
@@ -20,22 +21,29 @@ function App() {
   const horaPeru = React.createElement(
     'h2',
     {},
-    'La hora en Perú es: '+ new Date().toLocaleTimeString
-    ('es-PE')
+    'La hora en Perú es: ' + new Date().toLocaleTimeString
+      ('es-PE')
   );
 
   const horaQatar = React.createElement(
     'h2',
     {},
-    'La hora en Perú es: ' + horaqatar.toLocaleTimeString
-    ('es-PE')
+    'La hora en Qatar es: ' + horaqatar.toLocaleTimeString
+      ('es-PE')
   );
 
   const horaCorea = React.createElement(
     'h2',
     {},
-    'La hora en Perú es: '+horacorea.toLocaleTimeString
-    ('es-PE')
+    'La hora en Corea es: ' + horacorea.toLocaleTimeString
+      ('es-PE')
+  );
+
+  const horaMexico = React.createElement(
+    'h2',
+    {},
+    'La hora en Mexico es: ' + horamexico.toLocaleTimeString
+      ('es-PE')
   );
 
   /*
@@ -61,10 +69,11 @@ function App() {
         {horaPeru}
         {horaQatar}
         {horaCorea}
+        {horaMexico}
       </header>
     </div>
   );
-  
+
 
   root.render(element);
 
